@@ -6,4 +6,7 @@ import (
 
 func main() {
 	fmt.Println("test")
+	// PositiveSum(nil)
+
+	PositiveSum(nil)
 }
