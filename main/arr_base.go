@@ -1,9 +1,34 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
 	"strings"
 )
+
+/**
+ * buffer操作string
+ */
+func RepeatStr2(repititions int, value string) string {
+	var buffer bytes.Buffer
+
+	for i := 0; i < repititions; i++ {
+		buffer.WriteString(value)
+	}
+	return buffer.String()
+}
+
+func RepeatStr(repetitions int, value string) string {
+
+	//var strs []string
+	var str string
+	for i := 0; i <= repetitions-1; i++ {
+		// strs[i] = value
+		str += value
+	}
+	//replave above strings.Repeat(value, repititions)
+	return str
+}
 
 /* PositiveSum */
 func PositiveSum(numbers []int) int {
@@ -38,25 +63,25 @@ func BandNameGenerator(word string) string {
 	// chars := []rune(word)
 	finalStr := ""
 	if word[0] == word[len(word)-1] {
-		finalStr := splitAndUpper(word)
-		return finalStr
-	} else {
-		finalStr := titleAndThe(word)
+		finalStr = splitAndUpper(word)
 		return finalStr
 	}
+	finalStr = titleAndThe(word)
+	return finalStr
+
 	// strs
 	// strings.to
 	// if {
 
 	// }
 
-	return finalStr
+	// return finalStr
 }
 
 func splitAndUpper(word string) string {
 	finalStr := word
 	r := []rune(finalStr)
-	for i := 0; i < len(r); i++ {
+	for i := 1; i < len(r); i++ {
 		fmt.Println("r[", i, "]=", r[i], "string=", string(r[i]))
 		finalStr += string(r[i])
 	}

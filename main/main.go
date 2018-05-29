@@ -15,5 +15,6 @@ func main() {
 	fmt.Println(str[:3])
 	// chars := []rune(str)
 	// fmt.Println(chars[0] == chars[len(chars)-1])
-	// fmt.Println(BandNameGenerator("alaska"))
+	fmt.Println(BandNameGenerator("alaska"))
+	fmt.Println(RepeatStr(5, "hello"))
 }
